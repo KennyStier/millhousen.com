@@ -36,25 +36,142 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="card w-50">
-            <img class="card-img-top" src="/img/sign.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div class="jumbotron">
+            <h1 class="display-4">It's Fish Fry Season!</h1>
+            <p class="lead">With the season of Lent comes Millhousen's many fish fries!</p>
+            <hr class="my-4">
+            <p>If you're craving fish on a Friday night, know you can always get your fix in Millhousen!</p>
+            <p class="lead">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Learn more
+</button> </p>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Fish Fry Dates</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Location</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Februry 9th</th>
+                                        <td>Fire Dept.</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">February 16th</th>
+                                        <td>Knights Hall</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">February 23rd</th>
+                                        <td>Fire Dept.</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">March 2nd</th>
+                                        <td>Knights Hall</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">March 9th</th>
+                                        <td>Fire Dept.</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">March 16th</th>
+                                        <td>Knights Hall</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">March 23rd</th>
+                                        <td>Fire Dept.</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">March 30th</th>
+                                        <td>Knights Hall</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>Stone's always has fish on the Friday night buffet as well!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/img/building.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Stone's Family Restaurant</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+        <h2>Businesses and Organizations</h2>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/img/stones.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Stone's Family Restaurant</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="https://stonesfamilyrestaurant.com/" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
             </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/img/firedept.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Marion Twp. Volunteer Fire Dept.</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="http://www.millhousenfire.com/" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/img/knights.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Knights of St. John Commandery #227</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="https://www.facebook.com/KnightsofStJohnMillhousen/" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/img/church.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Immaculate Conception Church</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="https://millhousenchurch.com/" class="btn btn-primary">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+
+        <a href="https://www.google.com/maps/place/Millhousen,+IN/"><img src="https://maps.googleapis.com/maps/api/staticmap?center=39.210871,+-85.434546&zoom=16&scale=1&size=500x500&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of Millhousen"></a>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
 
 
 </body>
