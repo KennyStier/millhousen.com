@@ -175,6 +175,47 @@
             </div>
 
         </div>
+        <script>
+            // Weather Underground API
+            //<![CDATA[
+            var WU_API_KEY = '48574a450afc5534';
+            var weather = new XMLHttpRequest();
+            weather.onreadystatechange = function() {
+                if (weather.readyState == 4 && weather.status == 200) {
+                    var data = JSON.parse(weather.responseText);
+                    console.log(data);
+                    var currentTemp = data.current_observation.temp_f;
+                    var wind = data.current_observation.wind_string;
+                    var precipTotal = data.current_observation.precip_today_in;
+                    document.getElementById("current_temp").innerHTML = "Temperature: " + currentTemp + "&deg;F";
+                    document.getElementById("wind").innerHTML = "Wind " + wind;
+                    document.getElementById("precip").innerHTML = "Precip Today: " + precipTotal + " in";
+
+                }
+            }
+            weather.open("GET", "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/PWS:KINMILLH2.json", true);
+            weather.send();
+            //]]>
+
+        </script>
+
+
+        <div class="card" style="width: 36rem;">
+            <a href="https://wxcam.millhousen.us"><img class="card-img-top" src="https://wxcam.millhousen.us/picture/1/download/lastsnap.jpg" alt="Live Webcam"></a>
+            <div class="card-body">
+                <h5 class="card-title">Local Weather</h5>
+                <p class="card-text">This information is obtained from a live weather camera and a personal weather station.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li id="current_temp" class="list-group-item">Loading Temp...</li>
+                <li id="wind" class="list-group-item">Loading Wind...</li>
+                <li id="precip" class="list-group-item">Loading Precip...</li>
+            </ul>
+            <div class="card-body">
+                <a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KINMILLH2#history" class="card-link">Wunderground</a>
+                <a href="http://data.cocorahs.org/cocorahs/maps/?country=usa&state=in" class="card-link">CoCoRaHS</a>
+            </div>
+        </div>
 
         <a href="https://www.google.com/maps/place/Millhousen,+IN/"><img src="https://maps.googleapis.com/maps/api/staticmap?center=39.210871,+-85.434546&zoom=16&scale=1&size=500x500&maptype=roadmap&format=png&visual_refresh=true" alt="Google Map of Millhousen"></a>
 
