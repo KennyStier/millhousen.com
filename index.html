@@ -132,7 +132,7 @@
         <h2>Businesses and Organizations</h2>
         <div class="row">
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="/img/stones.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Stone's Family Restaurant</h5>
@@ -142,7 +142,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="/img/firedept.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Marion Twp. Volunteer Fire Dept.</h5>
@@ -154,7 +154,7 @@
 
             <div class="col">
 
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="/img/knights.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Knights of St. John Commandery #227</h5>
@@ -164,7 +164,7 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="/img/church.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Immaculate Conception Church</h5>
@@ -198,26 +198,33 @@
             //]]>
 
         </script>
+        <h2>Weather and Other Happenings</h2>
 
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 100%;">
+                    <a href="https://wxcam.millhousen.us"><img class="card-img-top" src="https://wxcam.millhousen.us/picture/1/download/lastsnap.jpg" alt="Live Webcam"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Local Weather</h5>
+                        <p class="card-text">This information is obtained from a live weather camera and a personal weather station.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li id="current_temp" class="list-group-item">Loading Temp...</li>
+                        <li id="wind" class="list-group-item">Loading Wind...</li>
+                        <li id="precip" class="list-group-item">Loading Precip...</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KINMILLH2#history" class="card-link">Wunderground</a>
+                        <a href="http://data.cocorahs.org/cocorahs/maps/?country=usa&state=in" class="card-link">CoCoRaHS</a>
+                    </div>
+                </div>
+            </div>
             <div class="col">
                 <div class="map-responsive">
                     <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Millhousen, IN&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
 
-        <div class="card" style="width: 36rem;">
-            <a href="https://wxcam.millhousen.us"><img class="card-img-top" src="https://wxcam.millhousen.us/picture/1/download/lastsnap.jpg" alt="Live Webcam"></a>
-            <div class="card-body">
-                <h5 class="card-title">Local Weather</h5>
-                <p class="card-text">This information is obtained from a live weather camera and a personal weather station.</p>
             </div>
-            <ul class="list-group list-group-flush">
-                <li id="current_temp" class="list-group-item">Loading Temp...</li>
-                <li id="wind" class="list-group-item">Loading Wind...</li>
-                <li id="precip" class="list-group-item">Loading Precip...</li>
-            </ul>
-            <div class="card-body">
-                <a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KINMILLH2#history" class="card-link">Wunderground</a>
-                <a href="http://data.cocorahs.org/cocorahs/maps/?country=usa&state=in" class="card-link">CoCoRaHS</a>
             <div class="col">
                 <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="/img/decatur-county-recycling.png" alt="Card image cap">
