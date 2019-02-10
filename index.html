@@ -60,7 +60,7 @@
         </div>
     </nav>
     <div class="container-fluid">
-      <!--   <div class="jumbotron">
+      <div class="jumbotron">
             <h1 class="display-4">It's Fish Fry Season!</h1>
             <p class="lead">With the season of Lent comes Millhousen's many fish fries!</p>
             <hr class="my-4">
@@ -69,9 +69,6 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Learn more
 </button> </p>
-
-
-            <!-- Modal --
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -92,44 +89,45 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Februry 9th</th>
+                                        <th scope="row">Februry 8th</th>
                                         <td>Fire Dept.</td>
 
                                     </tr>
                                     <tr>
-                                        <th scope="row">February 16th</th>
-                                        <td>Knights Hall</td>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">February 23rd</th>
+                                        <th scope="row">February 22nd</th>
                                         <td>Fire Dept.</td>
 
                                     </tr>
                                     <tr>
-                                        <th scope="row">March 2nd</th>
-                                        <td>Knights Hall</td>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">March 9th</th>
+                                        <th scope="row">March 8th</th>
                                         <td>Fire Dept.</td>
 
                                     </tr>
                                     <tr>
-                                        <th scope="row">March 16th</th>
+                                        <th scope="row">March 15th</th>
                                         <td>Knights Hall</td>
 
                                     </tr>
                                     <tr>
-                                        <th scope="row">March 23rd</th>
+                                        <th scope="row">March 22nd</th>
                                         <td>Fire Dept.</td>
 
                                     </tr>
                                     <tr>
-                                        <th scope="row">March 30th</th>
+                                        <th scope="row">March 29th</th>
                                         <td>Knights Hall</td>
-
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">April 5th</th>
+                                        <td>Fire Dept.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">April 12th</th>
+                                        <td>Knights Hall</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">April 19th</th>
+                                        <td>Knights Hall</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -140,8 +138,61 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
-	<div class="jumbotron">
+            </div>        </div>
+
+            <div class="row">
+                <div class="col">
+            <script>
+                // Weather Underground API
+                //<![CDATA[
+                var WU_API_KEY = '48574a450afc5534';
+                var weather = new XMLHttpRequest();
+                weather.onreadystatechange = function() {
+                    if (weather.readyState == 4 && weather.status == 200) {
+                        var data = JSON.parse(weather.responseText);
+                        console.log(data);
+                        var currentTemp = data.current_observation.temp_f;
+                        var wind = data.current_observation.wind_string;
+                        var precipTotal = data.current_observation.precip_today_in;
+                        document.getElementById("current_temp").innerHTML = "Temperature: " + currentTemp + "&deg;F";
+                        document.getElementById("wind").innerHTML = "Wind " + wind;
+                        document.getElementById("precip").innerHTML = "Precip Today: " + precipTotal + " in";
+    
+                    }
+                }
+                weather.open("GET", "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/PWS:KINMILLH2.json", true);
+                weather.send();
+                //]]>
+    
+            </script>    
+            <div class="row">
+                <div class="col">
+                        <h2>Weather and Other Happenings</h2>
+
+                    <div class="card" style="width: 100%;">
+                        <a href="https://wxcam.millhousen.com"><img class="card-img-top" src="https://wxcam.millhousen.com/picture/1/download/lastsnap.jpg" alt="Live Webcam"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">Local Weather</h5>
+                            <p class="card-text">This information is obtained from a live weather camera and a personal weather station.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li id="current_temp" class="list-group-item">Loading Temp...</li>
+                            <li id="wind" class="list-group-item">Loading Wind...</li>
+                            <li id="precip" class="list-group-item">Loading Precip...</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KINMILLH2#history" class="card-link">Wunderground</a>
+                            <a href="http://data.cocorahs.org/cocorahs/maps/?country=usa&state=in" class="card-link">CoCoRaHS</a>
+                        </div>
+                    </div>
+                </div></div></div>
+                <div class="col">
+                        <h2>Map</h2>
+                        <div class="map-responsive">
+                                <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Millhousen, IN&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </div>
+                </div></div>
+	<!-- <div class="jumbotron">
       	      <h1 class="display-4">Interested in Fiber?</h1>
       	      <p class="lead">After the connection of the new Verizon tower, ETC is offering something huge!</p>
      	       <hr class="my-4">
@@ -151,7 +202,6 @@
 	  Learn more
 	</button> </p>
         </div>
-<!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -169,8 +219,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        <h2>Businesses and Organizations</h2>
+            </div>-->
+            <h2>Businesses and Organizations</h2>
         <div class="row">
             <div class="col">
                 <div class="card" style="width: 100%;">
@@ -216,53 +266,7 @@
             </div>
 
         </div>
-<div class="map-responsive">
-                    <iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Millhousen, IN&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                </div>
-        <script>
-            // Weather Underground API
-            //<![CDATA[
-            var WU_API_KEY = '48574a450afc5534';
-            var weather = new XMLHttpRequest();
-            weather.onreadystatechange = function() {
-                if (weather.readyState == 4 && weather.status == 200) {
-                    var data = JSON.parse(weather.responseText);
-                    console.log(data);
-                    var currentTemp = data.current_observation.temp_f;
-                    var wind = data.current_observation.wind_string;
-                    var precipTotal = data.current_observation.precip_today_in;
-                    document.getElementById("current_temp").innerHTML = "Temperature: " + currentTemp + "&deg;F";
-                    document.getElementById("wind").innerHTML = "Wind " + wind;
-                    document.getElementById("precip").innerHTML = "Precip Today: " + precipTotal + " in";
-
-                }
-            }
-            weather.open("GET", "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/PWS:KINMILLH2.json", true);
-            weather.send();
-            //]]>
-
-        </script>
-        <h2>Weather and Other Happenings</h2>
-
-        <div class="row">
-            <div class="col">
-                <div class="card" style="width: 100%;">
-                    <a href="https://wxcam.millhousen.com"><img class="card-img-top" src="https://wxcam.millhousen.com/picture/1/download/lastsnap.jpg" alt="Live Webcam"></a>
-                    <div class="card-body">
-                        <h5 class="card-title">Local Weather</h5>
-                        <p class="card-text">This information is obtained from a live weather camera and a personal weather station.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li id="current_temp" class="list-group-item">Loading Temp...</li>
-                        <li id="wind" class="list-group-item">Loading Wind...</li>
-                        <li id="precip" class="list-group-item">Loading Precip...</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KINMILLH2#history" class="card-link">Wunderground</a>
-                        <a href="http://data.cocorahs.org/cocorahs/maps/?country=usa&state=in" class="card-link">CoCoRaHS</a>
-                    </div>
-                </div>
-            </div>
+        
             <div class="col">
                 <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="/img/decatur-county-recycling.png" alt="Card image cap">
@@ -272,16 +276,15 @@
                         <a href="http://www.decaturcountysolidwaste.com/mobile.html" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
-<div class="card" style="width: 100%;">
+<!-- <div class="card" style="width: 100%;">
                     <img class="card-img-top" src="/img/bookmobile.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Bookmobile</h5>
                         <p class="card-text">The mobile library will make stops in Millhousen in the Stone's parking lot once a week in the summer on Mondays from 10:30 AM to 11 AM. In addition to the Bookmobile's selection, nearly any book or movie can be requested by placing a hold on it via <a href="https://evergreen.lib.in.us/eg/opac/login?redirect_to=%2Feg%2Fopac%2Fmyopac%2Fmain">Evergreen Indiana</a>.</p>
                         <a href="http://www.greensburglibrary.org/library-services/bookmobile-2" class="btn btn-primary">Learn More</a>
                     </div>
-                </div>
+                </div>-->
             </div>
-        </div>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
