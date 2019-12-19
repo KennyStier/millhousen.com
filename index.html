@@ -62,44 +62,17 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <script>
-                    // Weather Underground API
-                    //<![CDATA[
-                    var WU_API_KEY = '48574a450afc5534';
-                    var weather = new XMLHttpRequest();
-                    weather.onreadystatechange = function() {
-                        if (weather.readyState == 4 && weather.status == 200) {
-                            var data = JSON.parse(weather.responseText);
-                            console.log(data);
-                            var currentTemp = data.current_observation.temp_f;
-                            var wind = data.current_observation.wind_string;
-                            var precipTotal = data.current_observation.precip_today_in;
-                            document.getElementById("current_temp").innerHTML = "Temperature: " + currentTemp + "&deg;F";
-                            document.getElementById("wind").innerHTML = "Wind " + wind;
-                            document.getElementById("precip").innerHTML = "Precip Today: " + precipTotal + " in";
-
-                        }
-                    }
-                    weather.open("GET", "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/PWS:KINMILLH2.json", true);
-                    weather.send();
-                    //]]>
-
-                </script>
                 <div class="row">
                     <div class="col">
                         <h2>Weather and Other Happenings</h2>
 
                         <div class="card" style="width: 100%;">
-                            <a href="https://wxcam.millhousen.com"><img class="card-img-top" src="https://wxcam.millhousen.com/picture/1/download/lastsnap.jpg" alt="Live Webcam"></a>
+                            <a href="https://wx.millhousen.com"><img class="card-img-top" src="https://wx.millhousen.com/current.jpg" alt="Live Webcam"></a>
                             <div class="card-body">
                                 <h5 class="card-title">Local Weather</h5>
                                 <p class="card-text">This information is obtained from a live weather camera and a personal weather station.</p>
                             </div>
-                            <ul class="list-group list-group-flush">
-                                <li id="current_temp" class="list-group-item">Loading Temp...</li>
-                                <li id="wind" class="list-group-item">Loading Wind...</li>
-                                <li id="precip" class="list-group-item">Loading Precip...</li>
-                            </ul>
+                            <iframe frameBorder="0" scrolling="no" height="290" src="https://wx.millhousen.com/pi/"></iframe>
                             <div class="card-body">
                                 <a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KINMILLH2#history" class="card-link">Wunderground</a>
                                 <a href="http://data.cocorahs.org/cocorahs/maps/?country=usa&state=in" class="card-link">CoCoRaHS</a>
