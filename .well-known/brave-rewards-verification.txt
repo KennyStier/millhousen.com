@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: millhousen.com
+Token: d089b668d829a4e1d573f781a4718a521dbfca94a368e9861496d5203b9e3999
