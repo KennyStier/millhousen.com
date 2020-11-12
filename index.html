@@ -14,12 +14,13 @@
 
         gtag('config', 'UA-114136026-1');
 
-        $(document).ready(function() {
-
-if(window.location.href.indexOf('#christmasWonderland') != -1) {
-  $('#exampleModal').modal('show');
-}
-
+$(document).ready(function () {
+    $('.modal').each(function () {
+        const modalId = `#${$(this).attr('id')}`;
+        if (window.location.href.indexOf(modalId) !== -1) {
+            $(modalId).modal('show');
+        }
+    });
 });
     </script>
 
@@ -31,6 +32,22 @@ if(window.location.href.indexOf('#christmasWonderland') != -1) {
     <link rel="stylesheet" href="/css/main.css">
     <link rel="icon" href="/img/sign.jpg">
     <title>Millhousen, Indiana</title>
+    <!-- Matomo -->
+<script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.millhousen.tech/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '5']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img src="https://analytics.millhousen.tech/matomo.php?idsite=5&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  <!-- End Matomo Code -->
 </head>
 
 <body>
