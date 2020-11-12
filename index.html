@@ -13,10 +13,17 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-114136026-1');
+
+        $(document).ready(function() {
+
+if(window.location.href.indexOf('#christmasWonderland') != -1) {
+  $('#exampleModal').modal('show');
+}
+
+});
     </script>
 
-    <meta name="description"
-        content="The unofficial website for the Town of Millhousen.">
+    <meta name="description" content="The unofficial website for the Town of Millhousen.">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
@@ -80,122 +87,53 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="jumbotron">
-                    <h1 class="display-4">It's Fish Fry Season!</h1>
-                    <p class="lead">With the season of Lent comes Millhousen's many fish fries!</p>
-                    <div class="alert alert-danger" role="alert">
-                        Fish Fries have been cancelled.
-                      </div>
+                    <h1 class="display-4">Millhousen Hometown Christmas Wonderland</h1>
+                    <p class="lead">Fun and games all weekend for the whole family</p>
+                    <p class="lead">December 5th and 6th</p>
                     <hr class="my-4">
-                    <p>If you're craving fish on a Friday night, know you can always get your fix in Millhousen!</p>
+                    <p>Get into the Christmas spirit and help support local families in need.</p>
                     <p class="lead">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             Learn more
                         </button> </p>
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Fish Fry Dates</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Millhousen Hometown Christmas Wonderland</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Date</th>
-                                                <th scope="col">Location</th>
-
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">Februry 7th</th>
-                                                <td>Fire Dept.</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">February 21st</th>
-                                                <td>Fire Dept.</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">February 28th</th>
-                                                <td>Knights Hall</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">March 6th</th>
-                                                <td>Fire Dept.</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">March 13th</th>
-                                                <td>Knights Hall</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">March 20th</th>
-                                                <td><del>Fire Dept.</del><ins>Cancelled</ins></td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">March 27th</th>
-                                                <td>Knights Hall</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">April 3rd</th>
-                                                <td><del>Fire Dept.</del><ins>Cancelled</ins></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">April 10th</th>
-                                                <td>Knights Hall</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <p>Stone's always has fish on the Friday night buffet as well!</p>
+                                    <iframe width="100%" height="800" frameBorder="0"
+      src="/js/pdfjs/web/viewer.html?file=/christmas-2020.pdf"></iframe>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 </div>
-                            </div></div></div></div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-
-                            <h2>Weather</h2>
-
-<div class="row"><div class="col"><img class="card-img-top"
-    src="https://wx.millhousen.com/current.jpg" alt="Live Webcam"></div><div class="col"><iframe frameBorder="0" width="475" scrolling="no" height="314"
-        src="https://wx.millhousen.com/pi/"></iframe></div></div>                                    <a href="https://wx.millhousen.com"
-        class="card-link">Millhousen WX</a>
-    <a href="http://data.cocorahs.org/cocorahs/maps/?country=usa&state=in"
-        class="card-link">CoCoRaHS</a>
-
-<!--
-                            <div class="card" style="width: 475px;">
-                                <a href="https://wx.millhousen.com"><img class="card-img-top"
-                                        src="https://wx.millhousen.com/current.jpg" alt="Live Webcam"></a>
-                                <div class="card-body">
-                                    <h5 class="card-title">Local Weather</h5>
-                                    <p class="card-text">This information is obtained from a live weather camera and a
-                                        personal weather station.</p>
-                                </div>
-                                <iframe frameBorder="0" scrolling="no" height="290"
-                                    src="https://wx.millhousen.com/pi/"></iframe>
-                                <div class="card-body">
-                                    <a href="https://www.wunderground.com/personal-weather-station/dashboard?ID=KINMILLH2#history"
-                                        class="card-link">Wunderground</a>
-                                    <a href="http://data.cocorahs.org/cocorahs/maps/?country=usa&state=in"
-                                        class="card-link">CoCoRaHS</a>
-                                </div>
-                            </div> -->
-
-                        </div></div>
-
                     </div>
-                    <!-- <div class="jumbotron">
+                </div>
+            </div>
+            <div class="col-md-6">
+
+                <h2>Weather</h2>
+
+                <div class="row">
+                    <div class="col"><img class="card-img-top" src="https://wx.millhousen.com/current.jpg"
+                            alt="Live Webcam"></div>
+                    <div class="col"><iframe frameBorder="0" width="475" scrolling="no" height="314"
+                            src="https://wx.millhousen.com/pi/"></iframe></div>
+                </div> <a href="https://wx.millhousen.com" class="card-link">Millhousen WX</a>
+                <a href="http://data.cocorahs.org/cocorahs/maps/?country=usa&state=in" class="card-link">CoCoRaHS</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div class="jumbotron">
       	      <h1 class="display-4">Interested in Fiber?</h1>
       	      <p class="lead">After the connection of the new Verizon tower, ETC is offering something huge!</p>
      	       <hr class="my-4">
@@ -223,106 +161,97 @@
                     </div>
                 </div>
             </div>-->
-                    <h2>Businesses and Organizations</h2>
-                    <div class="row">
-                        <div class="col">
-                            <div class="card" style="width: 100%;">
-                                <img class="card-img-top" src="/img/stones.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Stone's Family Restaurant</h5>
-                                    <p class="card-text">A small town homecooking restaurant famous for both fried
-                                        chicken and country hospitality</p>
-                                    <a href="https://stonesfamilyrestaurant.com/" class="btn btn-primary">Visit Site</a>
-                                    <div class="alert alert-danger" role="alert">
-                                        Stones will be providing carry-out only service at this time.
-                                      </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card" style="width: 100%;">
-                                <img class="card-img-top" src="/img/fire.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Marion Twp. Volunteer Fire Dept.</h5>
-                                    <p class="card-text">Serving Marion Township Since 1954</p>
-                                    <a href="http://www.millhousenfire.com/" class="btn btn-primary">Visit Site</a>
-                                    <div class="alert alert-danger" role="alert">
-                                        MTVFD Fish fries have been cancelled.
-                                      </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-
-                            <div class="card" style="width: 100%;">
-                                <img class="card-img-top" src="/img/knights.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Knights of St. John Commandery #227</h5>
-                                    <p class="card-text">Commandery #227 of this Catholic fraternal organization was
-                                        founded in 1914</p>
-                                    <a href="https://www.facebook.com/KnightsofStJohnMillhousen/"
-                                        class="btn btn-primary">Visit Site</a>
-                                        <div class="alert alert-danger" role="alert">
-                                            Knights' Fish fries have been cancelled.
-                                          </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card" style="width: 100%;">
-                                <img class="card-img-top" src="/img/church.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Immaculate Conception Church</h5>
-                                    <p class="card-text">Founded alongside the town itself, Immaculate Conception is at
-                                        the heart of Millhousen</p>
-                                    <a href="https://millhousenchurch.com/" class="btn btn-primary">Visit Site</a>
-                                    <div class="alert alert-danger" role="alert">
-                                        Masses, Stations of the Cross, and Saturday Rosary have been cancelled.
-                                      </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="card" style="width: 100%;">
-                                <img class="card-img-top" src="/img/decatur-county-recycling.png" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Recycling</h5>
-                                    <p class="card-text">A recycling truck makes its way to Millhousen once a month. Be
-                                        sure to bring your recyclables to the Stones parking lot on the second Saturday
-                                        of each month from 11 AM to 12 PM and take advantage of this service!</p>
-                                    <a href="http://www.decaturcountysolidwaste.com/mobile.html"
-                                        class="btn btn-primary">Learn More</a>
-                                </div>
-                            </div></div>
-                             <div class="col-md-3"><div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="/img/etc.svg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">ETC Hotspot</h5>
-                        <p class="card-text">A free ETC Fiber Hotspot has been setup in the Stone's parking lot for anyone who needs access to internet during these times.</p>
-                        <a href="https://etczone.com/news/updated-hotspot-locations/" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div></div>
-                        <div class="col-md-6">
-                            <h2>Map</h2>
-                            <div class="map-responsive">
-                                <iframe width="100%" height="500" id="gmap_canvas"
-                                    src="https://www.openstreetmap.org/export/embed.html?bbox=-85.4393380880356%2C39.20856440815572%2C-85.43037950992584%2C39.212542180211024&amp;layer=mapnik"
-                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                            </div>
-                        </div>
-                    </div>
+    <h2>Businesses and Organizations</h2>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="/img/stones.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Stone's Family Restaurant</h5>
+                    <p class="card-text">A small town homecooking restaurant famous for both fried
+                        chicken and country hospitality</p>
+                    <a href="https://stonesfamilyrestaurant.com/" class="btn btn-primary">Visit Site</a>
                 </div>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"
-                    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-                    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                    crossorigin="anonymous"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"
-                    integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="/img/fire.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Marion Twp. Volunteer Fire Dept.</h5>
+                    <p class="card-text">Serving Marion Township Since 1954</p>
+                    <a href="http://www.millhousenfire.com/" class="btn btn-primary">Visit Site</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+
+            <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="/img/knights.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Knights of St. John Commandery #227</h5>
+                    <p class="card-text">Commandery #227 of this Catholic fraternal organization was
+                        founded in 1914</p>
+                    <a href="https://www.facebook.com/KnightsofStJohnMillhousen/" class="btn btn-primary">Visit Site</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="/img/church.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Immaculate Conception Church</h5>
+                    <p class="card-text">Founded alongside the town itself, Immaculate Conception is at
+                        the heart of Millhousen</p>
+                    <a href="https://millhousenchurch.com/" class="btn btn-primary">Visit Site</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="/img/decatur-county-recycling.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Recycling</h5>
+                    <p class="card-text">A recycling truck makes its way to Millhousen once a month. Be
+                        sure to bring your recyclables to the Stones parking lot on the second Saturday
+                        of each month from 11 AM to 12 PM and take advantage of this service!</p>
+                    <a href="https://decaturcountysolidwaste.com/mobile-recycling/" class="btn btn-primary">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+                <img class="card-img-top" src="/img/great-plains-communications-vector-logo.svg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Great Plains Hotspot</h5>
+                    <p class="card-text">A free Great Plains Fiber Hotspot has been setup in the Stone's parking lot for
+                        anyone who needs access to internet during these times.</p>
+                    <a href="https://etczone.com/news/updated-hotspot-locations/" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2>Map</h2>
+            <div class="map-responsive">
+                <iframe width="100%" height="500" id="gmap_canvas"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-85.4393380880356%2C39.20856440815572%2C-85.43037950992584%2C39.212542180211024&amp;layer=mapnik"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
 
 
 </body>
